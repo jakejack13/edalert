@@ -1,0 +1,12 @@
+{
+  "manifest_version": 3,
+  "name": "Ed Alert",
+  "description": "Notifications for new Ed messages",
+  "version": "0.0",
+  "icons": {
+    "16": "images/edstem.png",
+    "32": "images/edstem.png",
+    "48": "images/edstem.png",
+    "128": "images/edstem.png"
+  }
+}
