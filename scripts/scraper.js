@@ -28,7 +28,13 @@ async function main() {
         let numPosts = getNumNewestPosts();
         console.log(numPosts + " new " + ((numPosts == 1) ? "post" : "posts"));
         //@ts-expect-error
-        await chrome.storage.local.set({ numPosts: numPosts })
+        chrome.storage.local.get(["key"]).then(async (/** @type {number} */ result) => {
+            if (result !== numPosts) {
+                //@ts-expect-error
+                await chrome.storage.local.set({ numPosts: numPosts });                
+            }
+          });
+        
         await sleep(5000);
     }
 }
