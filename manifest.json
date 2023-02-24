@@ -8,5 +8,22 @@
     "32": "images/edstem.png",
     "48": "images/edstem.png",
     "128": "images/edstem.png"
-  }
+  },
+  "action": { },
+  "background": {
+    "service_worker": "scripts/alert.js"
+  },
+  "content_scripts": [
+    {
+      "js": ["scripts/scraper.js"],
+      "matches": [
+        "https://edstem.org/us/courses/*"
+      ]
+    }
+  ],
+  "permissions":[
+    "storage", 
+    "notifications", 
+    "contextMenus"
+    ]
 }
