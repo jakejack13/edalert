@@ -18,6 +18,17 @@ function sleep(ms) {
     return new Promise(r => setTimeout(r, ms));
 }
 
+async function getSleepDuration() {
+    return new Promise((resolve) => {
+        chrome.storage.local.get("sleepDuration", function(data) {
+            if (data.sleepDuration) {
+                resolve(data.sleepDuration * 1000);
+            } else {
+                resolve(0);
+            }
+        });
+    });
+}
 
 /**
  * The main function
@@ -48,7 +59,8 @@ function sleep(ms) {
           }
         }
 
-        await sleep(10000);
+        let sleepDuration = await getSleepDuration();
+        await sleep(sleepDuration);
   }
 }
 
