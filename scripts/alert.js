@@ -8,7 +8,7 @@ chrome.storage.onChanged.addListener(function(changes, namespace) {
     }
     chrome.action.setBadgeBackgroundColor({ color: '#9688F1' });
 
-    let iconUrl = 'images/edstem.png';
+    let iconUrl = '../images/edstem.png';
     chrome.notifications.create({
         type: 'basic',
         iconUrl: iconUrl,
