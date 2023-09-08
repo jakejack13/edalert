@@ -9,7 +9,9 @@
     "48": "images/edstem.png",
     "128": "images/edstem.png"
   },
-  "action": { },
+  "action": {
+    "default_popup": "popup.html"
+  },
   "background": {
     "service_worker": "scripts/alert.js"
   },
@@ -22,8 +24,8 @@
     }
   ],
   "permissions":[
-    "storage", 
-    "notifications", 
+    "storage",
+    "notifications",
     "contextMenus"
     ]
 }
