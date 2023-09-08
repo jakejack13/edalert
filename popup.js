@@ -7,7 +7,6 @@ document.getElementById('checkNow').addEventListener('click', () => {
         chrome.tabs.sendMessage(activeTab.id, { action: "checkNow" });
     });
 });
-
 document.getElementById("saveDuration").addEventListener("click", function() {
     const duration = document.getElementById("sleepDuration").value;
     chrome.storage.local.set({ sleepDuration: duration });

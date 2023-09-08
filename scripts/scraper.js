@@ -30,7 +30,6 @@ async function getSleepDuration() {
     });
 }
 
-
 /**
  * The main function
  */
